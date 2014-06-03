@@ -1,5 +1,5 @@
-<div class='row-fluid sign-in'>
-  <div class='span6 login-option'>
+<div class='row sign-in'>
+  <div class='col-md-6 login-option'>
     <h3>Sign in with BridgeTroll</h3>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div>
@@ -23,7 +23,7 @@
       <div><%= f.submit "Sign in", class: 'btn btn-submit' %></div>
     <% end %>
   </div>
-  <div class='span6 login-option'>
+  <div class='col-md-6 login-option'>
     <h3>Sign in with something else</h3>
     <ul class='external-auth'>
       <% OmniauthProviders.provider_data.each do |provider| %>

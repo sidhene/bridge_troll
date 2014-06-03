@@ -7,10 +7,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui/datepicker
-//= require twitter/bootstrap/modal
-//= require twitter/bootstrap/transition
-//= require twitter/bootstrap/tooltip
-//= require twitter/bootstrap/popover
+//= require bootstrap/transition
+//= require bootstrap/modal
+//= require bootstrap/tooltip
+//= require bootstrap/popover
 //= require select2
 //= require handlebars.runtime
 //= require underscore
@@ -37,7 +37,7 @@
 $(document).ready(function () {
   var tableNeedsPagination = $('.datatable-sorted tbody tr').length > 10;
   $.extend( $.fn.dataTable.defaults, {
-    "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+    "sDom": "<'row'<'col-md-6'l><'col-md-6'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
     "sPaginationType": "bootstrap",
     "iDisplayLength": 50
   });

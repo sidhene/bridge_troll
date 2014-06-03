@@ -1,32 +1,35 @@
 .navbar {
-  .navbar-inner {
-    background: #333;
-    padding: 0 !important;
+  background: #333;
+  padding-right: 15px;
+  border-bottom: none;
 
-    @media (max-width: $phone-width) {
+  @media (max-width: $screen-xs-max) {
+    padding-right: 0;
 
-      .nav {
-        text-align: center;
+    .navbar-nav {
+      margin: 0;
+      text-align: center;
 
-        li {
-          float: none;
+      li {
+        float: none;
+        display: inline-block;
+
+        a {
           display: inline-block;
-
-          a {
-            display: inline-block;
-            margin-right: 5px;
-          }
+          margin-right: 5px;
         }
       }
     }
   }
 
-  .nav li a { 
+  .navbar-nav li a {
     color: white;
     text-shadow: none;
     margin-right: 20px;
     margin-top: 7px;
     margin-bottom: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     &:hover, &:focus {
       background: $orange-color;
@@ -64,7 +67,7 @@
     }
   }
 
-  @media (max-width: $phone-width) {
+  @media (max-width: $screen-xs-max) {
     .app-name {
       display: block;
       text-align: center;
