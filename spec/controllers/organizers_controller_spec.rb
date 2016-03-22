@@ -108,7 +108,6 @@ describe OrganizersController do
         post :create, event_id: @event.id, event_organizer: {event_id: @event.id, user_id: @volunteer_rsvp.user.id}
       }.to change(ActionMailer::Base.deliveries, :count).by(1)
       recipient = JSON.parse(ActionMailer::Base.deliveries.last.header['X-SMTPAPI'].to_s)['to']
-  #      expect(recipient).to eq(@volunteer_rsvp.email)
       expect(recipient).to eq(@volunteer_rsvp.user.email)
     end
 
